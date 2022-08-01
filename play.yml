@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  become: yes
+  become_method: sudo
+  name: local
+  tasks:
+  - name: install locally
+    script: jenkins.sh
+- hosts: machines
+  become: yes
+  become_method: sudo
+  name: kub nodes
+  tasks:
+  - name: install on others
+    script: others.sh
