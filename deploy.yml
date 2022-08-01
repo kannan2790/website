@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: veer2/app11
+        image: kannansethuraman/full_flow
         ports:
         - containerPort: 80
